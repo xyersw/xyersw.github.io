@@ -6,17 +6,13 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://xyersw.github.io">
-  <title>小鱼儿的书屋</title>
+  <title>Archives: 2020/2 | 小鱼儿的书屋</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-    
-    <!-- <meta name="keywords" content="">
-    <meta name="description" content=""> -->
-  
   <meta property="og:type" content="website">
 <meta property="og:title" content="小鱼儿的书屋">
-<meta property="og:url" content="https://xyersw.github.io/index.html">
+<meta property="og:url" content="https://xyersw.github.io/archives/2020/02/index.html">
 <meta property="og:site_name" content="小鱼儿的书屋">
 <meta property="og:locale" content="en_US">
 <meta property="article:author" content="zhangyu">
@@ -176,294 +172,53 @@
           </div>
           <div id="js-content" class="content-ll">
             
-
   
-    <article id="post-Spring Boot简介、maven配置、yml语法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
+  
     
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2020/02/05/Spring%20Boot%E7%AE%80%E4%BB%8B%E3%80%81maven%E9%85%8D%E7%BD%AE%E3%80%81yml%E8%AF%AD%E6%B3%95/">Spring Boot简介、maven配置、yml语法</a>
-	
-    </h1>
-  
-
-
-  
-  
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2020" class="archive-year">2020</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	
 <a href="/2020/02/05/Spring%20Boot%E7%AE%80%E4%BB%8B%E3%80%81maven%E9%85%8D%E7%BD%AE%E3%80%81yml%E8%AF%AD%E6%B3%95/" class="archive-article-date">
         <time datetime="2020-02-05T09:22:51.874Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-05</time>
 </a>
 
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h2 id="一-、Spring-Boot简介"><a href="#一-、Spring-Boot简介" class="headerlink" title="一 、Spring Boot简介"></a>一 、Spring Boot简介</h2><blockquote>
-<p>简化Spring应用开发的一站式框架；</p>
-<p>整个Spring技术栈的一个大整合；</p>
-<p>J2EE开发的一站式解决方案。</p>
-</blockquote>
-<h3 id="1、MAVEN设置"><a href="#1、MAVEN设置" class="headerlink" title="1、MAVEN设置"></a>1、MAVEN设置</h3><p>maven的settings.xml配置文件的profiles标签添加</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">profile</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">id</span>&gt;</span>jdk-1.8<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">activation</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">activeByDefault</span>&gt;</span>true<span class="tag">&lt;/<span class="name">activeByDefault</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">jdk</span>&gt;</span>1.8<span class="tag">&lt;/<span class="name">jdk</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">activation</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">properties</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">maven.compiler.source</span>&gt;</span>1.8<span class="tag">&lt;/<span class="name">maven.compiler.source</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">maven.compiler.target</span>&gt;</span>1.8<span class="tag">&lt;/<span class="name">maven.compiler.target</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">maven.compiler.compilerVersion</span>&gt;</span>1.8<span class="tag">&lt;/<span class="name">maven.compiler.compilerVersion</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">properties</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">profile</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="2、使用Spring-Initializer快速创建SpringBoot项目"><a href="#2、使用Spring-Initializer快速创建SpringBoot项目" class="headerlink" title="2、使用Spring Initializer快速创建SpringBoot项目"></a>2、使用Spring Initializer快速创建SpringBoot项目</h3><p>默认生成的Springboot项目：</p>
-<ul>
-<li>主程序已经生成好了，我们只需要我们自己的逻辑</li>
-<li>resources 文件夹中目录结构：<ul>
-<li>static：保存所有 的静态资源，js、css、images；</li>
-<li>templates：保存所有的模板页面；（Spring Boot默认jar包使用嵌入式的Tomcat，默认不支持JSP页面）可以用个模板引擎（freemarker、thymeleaf）；</li>
-<li>application.properties：Spring Boot应用的配置文件；可以修改一些默认设置</li>
-</ul>
-</li>
-</ul>
-<h2 id="二-、配置文件"><a href="#二-、配置文件" class="headerlink" title="二 、配置文件"></a>二 、配置文件</h2><p>Spring Boot使用一个全局配置文件，配置文件名是固定的；</p>
-<ul>
-<li>application.properties</li>
-<li>application.yml</li>
-</ul>
-<p>配置文件作用：修改Spring Boot自动配置的默认值；Spring Boot在底层都给我们自动配置好；</p>
-<h3 id="1、YAML语法"><a href="#1、YAML语法" class="headerlink" title="1、YAML语法"></a>1、YAML语法</h3><p>k:(空格)v  表示一对键值对，空格必须有；</p>
-<p>以空格的缩进来控制层级关系；只要是左对齐的一列数据，都是一个层级的</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">server:</span></span><br><span class="line">	<span class="attr">port:</span> <span class="number">8081</span></span><br><span class="line">	<span class="attr">path:</span> <span class="string">/hello</span></span><br></pre></td></tr></table></figure>
-
-<p>属性和值也是大小写敏感型</p>
-<h3 id="2、值的写法"><a href="#2、值的写法" class="headerlink" title="2、值的写法"></a>2、值的写法</h3><ul>
-<li><h4 id="字面量：普通值（数字，字符串，布尔值）"><a href="#字面量：普通值（数字，字符串，布尔值）" class="headerlink" title="字面量：普通值（数字，字符串，布尔值）"></a>字面量：普通值（数字，字符串，布尔值）</h4><p>​        k: v，字面直接来写；</p>
-<p>​            字符串默认不加上单引号或双引号；</p>
-<p>​            “”: 双引号，不会转译字符里面的特殊字符，特殊字符会作为本身表示的意思</p>
-<p>​                name: “zhangsan \n lisi”   输出   zhangsan 换行 lisi</p>
-<p>​            ‘’：单引号，会转译特殊字符，特殊字符最终只是一个普通的字符串数据</p>
-<p>​                name: “zhangsan \n lisi”   输出   zhangsan \n lisi</p>
-</li>
-<li><h4 id="对象-属性和值-、Map-键值对"><a href="#对象-属性和值-、Map-键值对" class="headerlink" title="对象 (属性和值)、Map (键值对)"></a>对象 (属性和值)、Map (键值对)</h4></li>
-</ul>
-<p>​        k: v，在下一行来写对象的属性和值的关系；注意缩进</p>
-<p>​                对象还是k: v的方式</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">friends:</span></span><br><span class="line">	<span class="attr">lastName:</span> <span class="string">zhangsan</span></span><br><span class="line">	<span class="attr">age:</span> <span class="number">20</span></span><br></pre></td></tr></table></figure>
-
-<p>行内写法：</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">friends:</span> <span class="string">&#123;lastName:</span> <span class="string">zhangsan,age:</span> <span class="number">20</span><span class="string">&#125;</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><h4 id="数组-List、Set"><a href="#数组-List、Set" class="headerlink" title="数组(List、Set):"></a>数组(List、Set):</h4></li>
-</ul>
-<p>用- 值表示数组中的一个元素</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">pets:</span></span><br><span class="line"> <span class="bullet">-</span> <span class="string">cat</span></span><br><span class="line"> <span class="bullet">-</span> <span class="string">dog</span></span><br><span class="line"> <span class="bullet">-</span> <span class="string">pig</span></span><br></pre></td></tr></table></figure>
-
-<p>行内写法</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">pets:</span> <span class="string">[cat,dog,pig]</span></span><br></pre></td></tr></table></figure>
-
-
-
-
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2020/02/05/Spring%20Boot%E7%AE%80%E4%BB%8B%E3%80%81maven%E9%85%8D%E7%BD%AE%E3%80%81yml%E8%AF%AD%E6%B3%95/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
         </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-xsjava-first" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
+    	 
   
     <h1 itemprop="name">
 	
-	  <a class="article-title" href="/2020/01/18/xsjava-first/">行思Java第一套题</a>
+	  <a class="archive-article-title" href="/2020/02/05/Spring%20Boot%E7%AE%80%E4%BB%8B%E3%80%81maven%E9%85%8D%E7%BD%AE%E3%80%81yml%E8%AF%AD%E6%B3%95/">Spring Boot简介、maven配置、yml语法</a>
 	
     </h1>
   
 
 
-  
-  
-<a href="/2020/01/18/xsjava-first/" class="archive-article-date">
-        <time datetime="2020-01-18T13:03:07.499Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-18</time>
-</a>
+        <div class="article-info info-on-right">
+          
+          
 
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p>这是第一套题的AC代码，仅供参考</p>
-<h2 id="AC代码"><a href="#AC代码" class="headerlink" title="AC代码"></a>AC代码</h2>
-    
-    <a class="article-more-a" href="/2020/01/18/xsjava-first/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2020/01/18/xsjava-first/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
+        </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-first" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
   
   
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2020/01/12/first/">Hello</a>
-	
-    </h1>
+    </div></section>
   
 
-
-  
-  
-<a href="/2020/01/12/first/" class="archive-article-date">
-        <time datetime="2020-01-12T06:36:20.514Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-12</time>
-</a>
-
-  
-  
     
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p>Welcome to my blog! This is my first blog</p>
-<p>2020.1.12 记录一下！</p>
-
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2020/01/12/first/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-  
 
 
           </div>
@@ -503,9 +258,9 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
+		isHome: false,
 		isPost: false,
-		isArchive: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
