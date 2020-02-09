@@ -6,15 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://xyersw.github.io">
-  <title>Archives: 2020/2 | 小鱼儿的书屋</title>
+  <title>行思Java第三套题 | 小鱼儿的书屋</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta property="og:type" content="website">
-<meta property="og:title" content="小鱼儿的书屋">
-<meta property="og:url" content="https://xyersw.github.io/archives/2020/02/index.html">
+  <meta name="description" content="AC代码A题">
+<meta property="og:type" content="article">
+<meta property="og:title" content="行思Java第三套题">
+<meta property="og:url" content="https://xyersw.github.io/2020/02/09/%E8%A1%8C%E6%80%9DJava%E7%AC%AC%E4%B8%89%E5%A5%97%E9%A2%98/index.html">
 <meta property="og:site_name" content="小鱼儿的书屋">
+<meta property="og:description" content="AC代码A题">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-02-09T08:28:34.762Z">
+<meta property="article:modified_time" content="2020-02-09T08:30:41.182Z">
 <meta property="article:author" content="zhangyu">
 <meta name="twitter:card" content="summary">
   
@@ -171,86 +175,258 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-行思Java第三套题" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
   
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
+    <h1 class="article-title" itemprop="name">
+      行思Java第三套题
+    </h1>
+  
+
+
+  
+  
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
 <a href="/2020/02/09/%E8%A1%8C%E6%80%9DJava%E7%AC%AC%E4%B8%89%E5%A5%97%E9%A2%98/" class="archive-article-date">
         <time datetime="2020-02-09T08:28:34.762Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-09</time>
 </a>
 
-        </div>
-    	 
   
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2020/02/09/%E8%A1%8C%E6%80%9DJava%E7%AC%AC%E4%B8%89%E5%A5%97%E9%A2%98/">行思Java第三套题</a>
-	
-    </h1>
   
+    
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> 字数统计:</span>
+      <span class="post-count">1.2k字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> 阅读时长≈</span>
+      <span class="post-count">7分</span>
+    </span>
+  </span>
+</div>
 
 
-        <div class="article-info info-on-right">
-          
-          
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h3 id="AC代码"><a href="#AC代码" class="headerlink" title="AC代码"></a>AC代码</h3><h2 id="A题"><a href="#A题" class="headerlink" title="A题"></a>A题</h2><a id="more"></a>
 
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 最小公倍数</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> zhang</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">int</span> a,b,c;</span><br><span class="line">	</span><br><span class="line">		<span class="keyword">while</span>(sc.hasNext()) &#123;</span><br><span class="line">			</span><br><span class="line">			a=sc.nextInt();</span><br><span class="line">			b=sc.nextInt();</span><br><span class="line">			c=a;</span><br><span class="line">			<span class="keyword">while</span>(<span class="keyword">true</span>) &#123;</span><br><span class="line">				<span class="keyword">if</span>(c%a==<span class="number">0</span> &amp;&amp; c%b==<span class="number">0</span>) &#123;</span><br><span class="line">					System.out.println(c);</span><br><span class="line">					<span class="keyword">break</span>;</span><br><span class="line">				&#125;</span><br><span class="line">				c++;</span><br><span class="line">			&#125;</span><br><span class="line">			</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="B题"><a href="#B题" class="headerlink" title="B题"></a>B题</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 汉字统计</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> zhang</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">		<span class="keyword">int</span> n = sc.nextInt();</span><br><span class="line">		sc.nextLine();</span><br><span class="line">		<span class="keyword">while</span>(n--!=<span class="number">0</span>) &#123;</span><br><span class="line">			String str=sc.nextLine();</span><br><span class="line">			<span class="keyword">int</span> count=<span class="number">0</span>;</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;str.length(); i++) &#123;</span><br><span class="line">			</span><br><span class="line">				<span class="keyword">char</span> a=str.charAt(i);</span><br><span class="line">				<span class="keyword">if</span>(a&gt;<span class="number">127</span>) &#123;</span><br><span class="line">					count++;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			System.out.println(count);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="C题"><a href="#C题" class="headerlink" title="C题"></a>C题</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 首字母变大写</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> zhang</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">		String str;</span><br><span class="line">		<span class="keyword">while</span>(sc.hasNext()) &#123;</span><br><span class="line">			str=sc.nextLine();</span><br><span class="line">			System.out.print((<span class="keyword">char</span>)(str.charAt(<span class="number">0</span>)-<span class="number">32</span>));</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;str.length(); i++) &#123;</span><br><span class="line">				<span class="keyword">if</span>(str.charAt(i-<span class="number">1</span>)==<span class="string">' '</span>) &#123;</span><br><span class="line">					System.out.print((<span class="keyword">char</span>)(str.charAt(i)-<span class="number">32</span>));</span><br><span class="line">				&#125;<span class="keyword">else</span> &#123;</span><br><span class="line">					System.out.print((<span class="keyword">char</span>)str.charAt(i));</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			System.out.println();</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="D题"><a href="#D题" class="headerlink" title="D题"></a>D题</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 统计元音</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> zhang</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">		<span class="keyword">int</span> n;</span><br><span class="line">		String str;</span><br><span class="line">		n=sc.nextInt();</span><br><span class="line">		sc.nextLine();</span><br><span class="line">		<span class="keyword">while</span>(n--!=<span class="number">0</span>) &#123;</span><br><span class="line">			<span class="keyword">int</span> a=<span class="number">0</span>,e=<span class="number">0</span>,i=<span class="number">0</span>,o=<span class="number">0</span>,u=<span class="number">0</span>;</span><br><span class="line">			str=sc.nextLine();</span><br><span class="line">			<span class="keyword">char</span>[] chs=str.toCharArray();</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">char</span> ch:chs) &#123;</span><br><span class="line">				<span class="keyword">if</span>(ch==<span class="string">'a'</span>)&#123;</span><br><span class="line">					++a;</span><br><span class="line">				&#125;<span class="keyword">else</span> <span class="keyword">if</span>(ch==<span class="string">'e'</span>) &#123;</span><br><span class="line">					++e;</span><br><span class="line">				&#125;<span class="keyword">else</span> <span class="keyword">if</span>(ch==<span class="string">'i'</span>) &#123;</span><br><span class="line">					++i;</span><br><span class="line">				&#125;<span class="keyword">else</span> <span class="keyword">if</span>(ch==<span class="string">'o'</span>) &#123;</span><br><span class="line">					++o;</span><br><span class="line">				&#125;<span class="keyword">else</span> <span class="keyword">if</span>(ch==<span class="string">'u'</span>) &#123;</span><br><span class="line">					++u;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			System.out.printf(<span class="string">"a:"</span>+a+<span class="string">"%ne:"</span>+e+<span class="string">"%ni:"</span>+i+<span class="string">"%no:"</span>+o+<span class="string">"%nu:"</span>+u+<span class="string">"%n"</span>);</span><br><span class="line">			<span class="keyword">if</span>(n!=<span class="number">0</span>) System.out.println();</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="E题"><a href="#E题" class="headerlink" title="E题"></a>E题</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 素数判定</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> zhang</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">		<span class="keyword">int</span> x,y,num;</span><br><span class="line">		<span class="keyword">while</span>(sc.hasNext()) &#123;</span><br><span class="line">			x=sc.nextInt();</span><br><span class="line">			y=sc.nextInt();</span><br><span class="line">			<span class="keyword">if</span>(x==<span class="number">0</span> &amp;&amp; y==<span class="number">0</span>) <span class="keyword">break</span>;</span><br><span class="line">			<span class="keyword">boolean</span> flag=<span class="keyword">true</span>;</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> i=x; (i&lt;=y &amp;&amp; flag); i++) &#123;</span><br><span class="line">				num=i*i+i+<span class="number">41</span>;</span><br><span class="line">				<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">2</span>; j*j&lt;=num &amp;&amp; flag; j++) &#123;</span><br><span class="line">					<span class="keyword">if</span>(num%j==<span class="number">0</span>) &#123;</span><br><span class="line">						flag=<span class="keyword">false</span>;</span><br><span class="line">						System.out.println(<span class="string">"Sorry"</span>);</span><br><span class="line">						<span class="keyword">break</span>;</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">if</span>(flag) System.out.println(<span class="string">"OK"</span>);</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="F题"><a href="#F题" class="headerlink" title="F题"></a>F题</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 十八岁生日</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> zhang</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        <span class="keyword">int</span> n;</span><br><span class="line">        String str;</span><br><span class="line">        n=sc.nextInt();</span><br><span class="line">        sc.nextLine();</span><br><span class="line">        <span class="keyword">while</span>(n--!=<span class="number">0</span>) &#123;</span><br><span class="line">            str=sc.nextLine();</span><br><span class="line">            String[] strs=str.split(<span class="string">"-"</span>);</span><br><span class="line">            <span class="keyword">int</span> y = Integer.parseInt(strs[<span class="number">0</span>]);</span><br><span class="line">            <span class="keyword">int</span> m = Integer.parseInt(strs[<span class="number">1</span>]);</span><br><span class="line">            <span class="keyword">int</span> d = Integer.parseInt(strs[<span class="number">2</span>]);</span><br><span class="line">            <span class="keyword">int</span> year=y+<span class="number">18</span>;</span><br><span class="line">            <span class="keyword">int</span> days=<span class="number">0</span>;</span><br><span class="line">            <span class="keyword">if</span>(m==<span class="number">2</span> &amp;&amp; d==<span class="number">29</span> &amp;&amp; leapyear(year)!=<span class="number">1</span>) &#123;</span><br><span class="line">                System.out.println(-<span class="number">1</span>);</span><br><span class="line">            &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">                days=<span class="number">365</span>*<span class="number">18</span>;</span><br><span class="line">                <span class="keyword">for</span>(<span class="keyword">int</span> i=y+<span class="number">1</span>; i&lt;year; i++) &#123;</span><br><span class="line">                    days+=leapyear(i);</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span>(m&gt;<span class="number">2</span>) &#123;</span><br><span class="line">                    days+=leapyear(year); <span class="comment">//18岁那年的闰年天数</span></span><br><span class="line">                &#125;<span class="keyword">else</span> <span class="keyword">if</span>(m&lt;<span class="number">2</span> || d!=<span class="number">29</span>) &#123;</span><br><span class="line">                    days+=leapyear(y);    <span class="comment">//出生年闰年天数</span></span><br><span class="line">                &#125;</span><br><span class="line">                System.out.println(days);</span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">leapyear</span><span class="params">(<span class="keyword">int</span> y)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>((y%<span class="number">4</span> == <span class="number">0</span> &amp;&amp; y%<span class="number">100</span> != <span class="number">0</span>) || y%<span class="number">400</span> == <span class="number">0</span>)</span><br><span class="line">            <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="G题"><a href="#G题" class="headerlink" title="G题"></a>G题</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 水仙花数</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> zhang</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">int</span> a,b;</span><br><span class="line">	</span><br><span class="line">		<span class="keyword">while</span>(sc.hasNext()) &#123;</span><br><span class="line">			</span><br><span class="line">			a=sc.nextInt();</span><br><span class="line">			b=sc.nextInt();</span><br><span class="line">			<span class="keyword">boolean</span> flag=<span class="keyword">true</span>;</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> i=a; i&lt;=b; i++) &#123;</span><br><span class="line">				<span class="keyword">int</span> n=i;</span><br><span class="line">				<span class="keyword">int</span> x=n%<span class="number">10</span>;</span><br><span class="line">				n/=<span class="number">10</span>;</span><br><span class="line">				<span class="keyword">int</span> y=n%<span class="number">10</span>;</span><br><span class="line">				<span class="keyword">int</span> z=n/=<span class="number">10</span>;</span><br><span class="line">				<span class="keyword">if</span>(i==x*x*x+y*y*y+z*z*z) &#123;</span><br><span class="line">					<span class="keyword">if</span>(flag) &#123;</span><br><span class="line">						flag=<span class="keyword">false</span>;</span><br><span class="line">						System.out.print(i);</span><br><span class="line">					&#125;</span><br><span class="line">					<span class="keyword">else</span></span><br><span class="line">						System.out.print(<span class="string">" "</span>+i);</span><br><span class="line">				&#125;</span><br><span class="line">				</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">if</span>(flag) System.out.print(<span class="string">"no"</span>);</span><br><span class="line">			System.out.println();</span><br><span class="line">			</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="H题"><a href="#H题" class="headerlink" title="H题"></a>H题</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Arrays;</span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 排序</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> zhang</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">		</span><br><span class="line">		String str;</span><br><span class="line">		<span class="keyword">while</span>(sc.hasNext()) &#123;</span><br><span class="line">			str=sc.next();</span><br><span class="line">			String[] strs=str.split(<span class="string">"5"</span>);</span><br><span class="line">			<span class="keyword">int</span>[] arr= <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">1000</span>];</span><br><span class="line">			<span class="keyword">int</span> j=<span class="number">0</span>;</span><br><span class="line">			<span class="keyword">for</span>(String s:strs) &#123;</span><br><span class="line">				<span class="keyword">if</span>(!s.equals(<span class="string">""</span>)) arr[j++]=Integer.parseInt(s);</span><br><span class="line">			&#125;</span><br><span class="line">			Arrays.sort(arr,<span class="number">0</span>,j);;</span><br><span class="line">			</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;j; i++) &#123;</span><br><span class="line">				<span class="keyword">if</span>(i==<span class="number">0</span>) &#123;</span><br><span class="line">				</span><br><span class="line">					System.out.print(arr[i]);</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">else</span></span><br><span class="line">					System.out.print(<span class="string">" "</span>+arr[i]);</span><br><span class="line">				</span><br><span class="line">			&#125;</span><br><span class="line">			System.out.println();</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="I题"><a href="#I题" class="headerlink" title="I题"></a>I题</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"><span class="keyword">import</span> java.util.Set;</span><br><span class="line"><span class="keyword">import</span> java.util.TreeSet;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 单词数</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> zhang</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">		</span><br><span class="line">		String str;</span><br><span class="line">		<span class="keyword">while</span>(sc.hasNext()) &#123;</span><br><span class="line">			</span><br><span class="line">			str=sc.nextLine();</span><br><span class="line">			<span class="keyword">if</span>(str.equals(<span class="string">"#"</span>)) <span class="keyword">break</span>;</span><br><span class="line">			String[] strs = str.split(<span class="string">" "</span>);</span><br><span class="line">			Set&lt;String&gt; set = <span class="keyword">new</span> TreeSet&lt;&gt;();</span><br><span class="line">			<span class="keyword">for</span>(String s:strs) &#123;</span><br><span class="line">				</span><br><span class="line">				<span class="keyword">if</span>(!s.equals(<span class="string">""</span>))</span><br><span class="line">					set.add(s);</span><br><span class="line">			&#125;</span><br><span class="line">			</span><br><span class="line">			System.out.println(set.size());</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="J题"><a href="#J题" class="headerlink" title="J题"></a>J题</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 平均成绩</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> zhang</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">int</span> m,n;</span><br><span class="line">		<span class="keyword">while</span>(sc.hasNext()) &#123;</span><br><span class="line">			n=sc.nextInt();</span><br><span class="line">			m=sc.nextInt();</span><br><span class="line">			<span class="keyword">double</span>[][] a=<span class="keyword">new</span> <span class="keyword">double</span>[<span class="number">100</span>][<span class="number">50</span>];</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;n; i++) &#123;</span><br><span class="line">				<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>; j&lt;m; j++) &#123;</span><br><span class="line">					a[i][j]=sc.nextDouble();</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;n; i++) &#123;	</span><br><span class="line">				<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>; j&lt;m; j++)&#123;</span><br><span class="line">					a[i][m]+=a[i][j];</span><br><span class="line">				&#125;</span><br><span class="line">				a[i][m]/=m;</span><br><span class="line">				<span class="keyword">if</span>(i==<span class="number">0</span>) System.out.printf(<span class="string">"%.2f"</span>,a[i][m]);</span><br><span class="line">				<span class="keyword">else</span> System.out.printf(<span class="string">" %.2f"</span>,a[i][m]); </span><br><span class="line">			&#125;</span><br><span class="line">			System.out.println();</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;m; i++)&#123;</span><br><span class="line">				<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>; j&lt;n; j++)&#123;</span><br><span class="line">					a[n][i]+=a[j][i];</span><br><span class="line">				&#125;</span><br><span class="line">				a[n][i]/=n;</span><br><span class="line">				<span class="keyword">if</span>(i==<span class="number">0</span>) System.out.printf(<span class="string">"%.2f"</span>,a[n][i]);</span><br><span class="line">				<span class="keyword">else</span> System.out.printf(<span class="string">" %.2f"</span>, a[n][i]);</span><br><span class="line">			&#125;</span><br><span class="line">			System.out.println();</span><br><span class="line">			<span class="keyword">int</span> count=<span class="number">0</span>;</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;n; i++)&#123;</span><br><span class="line">				<span class="keyword">boolean</span> flag=<span class="keyword">true</span>;</span><br><span class="line">				<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>; j&lt;m; j++)&#123;</span><br><span class="line">					<span class="keyword">if</span>(a[i][j]&lt;a[n][j])&#123;</span><br><span class="line">						flag=<span class="keyword">false</span>; <span class="keyword">break</span>;</span><br><span class="line">					&#125;</span><br><span class="line">					</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">if</span>(flag) ++count;</span><br><span class="line">			&#125;</span><br><span class="line">			System.out.println(count);</span><br><span class="line">			System.out.println();</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+    
+
+    
+    <div class="page-reward">
+      <a href="javascript:void(0);" class="page-reward-btn tooltip-top" target="_self">
+        <div class="tooltip tooltip-east">
+          <span class="tooltip-item">
+            赏
+          </span>
+          <span class="tooltip-content">
+            <span class="tooltip-text">
+              <span class="tooltip-inner">
+                <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i
+                    class="icon icon-quo-right"></i></p>
+                <div class="reward-box">
+                  
+                  
+                </div>
+              </span>
+            </span>
+          </span>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </a>
+    </div>
+    
+
+    
+    <div class="declare"> 
+      <ul class="post-copyright">
+        <li>
+          <strong>本文作者：</strong>
+          zhangyu
+        </li>
+        <li>
+          <strong>本文链接：</strong>
+          <a href="https:/xyersw.github.io/2020/02/09/行思Java第三套题/" title="行思Java第三套题" target="_blank">https:/xyersw.github.io/2020/02/09/行思Java第三套题/</a>
+        </li>
+        
+        <li>
+          <strong>版权声明： </strong>
+          
+          本博客所有文章除特别声明外，均采用 <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus/blob/master/LICENSE" rel="external nofollow" target="_blank">MIT</a> 许可协议。转载请注明出处！
+        </li>
+        
+      </ul>
+    </div>
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+    
+
+    
+
+    
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://xyersw.github.io/2020/02/09/%E8%A1%8C%E6%80%9DJava%E7%AC%AC%E4%B8%89%E5%A5%97%E9%A2%98/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+
+    
+    <div class="clearfix"></div>
+  </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/02/05/Spring%20Boot%E7%AE%80%E4%BB%8B%E3%80%81maven%E9%85%8D%E7%BD%AE%E3%80%81yml%E8%AF%AD%E6%B3%95/" class="archive-article-date">
-        <time datetime="2020-02-05T09:22:51.874Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-05</time>
-</a>
 
+
+<nav id="article-nav">
+  
+  
+    <a href="/2020/02/05/Spring%20Boot%E7%AE%80%E4%BB%8B%E3%80%81maven%E9%85%8D%E7%BD%AE%E3%80%81yml%E8%AF%AD%E6%B3%95/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Spring Boot简介、maven配置、yml语法</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2020/02/05/Spring%20Boot%E7%AE%80%E4%BB%8B%E3%80%81maven%E9%85%8D%E7%BD%AE%E3%80%81yml%E8%AF%AD%E6%B3%95/">Spring Boot简介、maven配置、yml语法</a>
-	
-    </h1>
-  
+        
+        
+    </div>
+</aside>
 
 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+
+
+
+
+
+
+
+
   
+  <div id="gitment-ctn"></div>
   
-    </div></section>
+    <!-- 中文 -->
+    <link rel="stylesheet" href="/lib/gitment.css">
+    <script src="/lib/gitment.js"></script>
+  
+  <script>
+    <!-- id: "行思Java第三套题" -->
+    var gitment = new Gitment({
+      id: "20200209162834",
+      owner: 'xyersw',
+      repo: 'xyerswpinglun',
+      oauth: {
+        client_id: '6f1f863dee4114ed4e45',
+        client_secret: '41dcf9427bc763bdefd4e9ff17d8737d1ca6cf4d',
+      },
+    })
+    gitment.render('gitment-ctn')
+  </script>
+
+
   
 
-    
 
 
           </div>
@@ -291,8 +467,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
